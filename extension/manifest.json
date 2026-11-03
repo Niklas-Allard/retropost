@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "RetroPost – TikTok Studio Helfer",
+  "version": "1.0.0",
+  "description": "Füllt geplante RetroPost-Videos und Captions in TikTok Studio aus. Du klickst selbst auf „Posten“.",
+  "permissions": ["storage", "alarms", "tabs"],
+  "host_permissions": ["http://127.0.0.1:4317/*", "http://localhost:4317/*", "https://www.tiktok.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{ "matches": ["https://www.tiktok.com/tiktokstudio/upload*", "https://www.tiktok.com/creator-center/upload*"], "js": ["content.js"], "run_at": "document_idle" }],
+  "options_page": "options.html",
+  "action": { "default_title": "RetroPost", "default_popup": "options.html" }
+}

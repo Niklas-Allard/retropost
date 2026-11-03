@@ -1,0 +1,16 @@
+{
+  "name": "retropost",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RetroPost – privates Self-hosted-Tool zum Erstellen, Planen und Posten von Shorts (YouTube, Instagram, TikTok)",
+  "type": "commonjs",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "RETROPOST_DRY_RUN=1 node server/index.js",
+    "doctor": "node scripts/doctor.js",
+    "autostart:install": "node scripts/autostart.js install",
+    "autostart:remove": "node scripts/autostart.js uninstall",
+    "mcp": "node server/mcp.js"
+  }
+}
